@@ -12,7 +12,59 @@
     <h1 class="title">Tic Tac Toe</h1>
     <div>
         <div>
-            <button class="restart-game">Restart Game</button>
+            <dialog id="game-dialog">
+                <form action="" class="player-form">
+                    <label for="player1Name">Player 1 Name: </label>
+                    <input type="text" name="player1Name" id="player1Name" required>
+
+                    <p>Choose Player 1 Token: </p>
+                    <ul>
+                        <li>
+                            <input type="radio" name="player1Token" id="tokenX" value="X" checked>
+                            <label for="tokenX">X</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="player1Token" id="tokenO" value="O">
+                            <label for="tokenO">O</label>
+                        </li>
+                    </ul>
+
+                    <div></div>
+                    
+                    <label for="player2Name">Player 2 Name: </label>
+                    <input type="text" name="player2Name" id="player2Name" required>
+
+                    <p>Choose Player 2 Token: </p>
+                    <ul>
+                        <li>
+                            <input type="radio" name="player2Token" id="tokenX" value="X">
+                            <label for="tokenX">X</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="player2Token" id="tokenO" value="O" checked>
+                            <label for="tokenO">O</label>
+                        </li>
+                    </ul>
+
+                    <div>
+                        <button class="begin">begin</button>
+                        <button class="cancel">cancel</button>
+                    </div>
+                </form>
+            </dialog>
+        </div>
+        <div>
+            <button class="start-game">Start Game</button>
+            <button class="restart-game" hidden>Play Again</button>
+            <button class="new-game" hidden>New Game</button>
+        </div>
+        <div>
+            <p>Player 1: </p>
+            <output class="player1-name output"></output>
+            <output class="player1-token output"></output>
+            <p>Player 2: </p>
+            <output class="player2-name output"></output>
+            <output class="player2-token output"></output>
         </div>
     </div>
     <div class="game-board-container">
