@@ -6,71 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="javascript.js" defer></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icons/tic-tac-toe-icon.svg">
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
     <h1 class="title">Tic Tac Toe</h1>
-    <div>
+    <div class="game-container">
         <div>
             <dialog id="game-dialog">
                 <form action="" class="player-form">
-                    <label for="player1Name">Player 1 Name: </label>
-                    <input type="text" name="player1Name" id="player1Name" required>
-
-                    <p>Choose Player 1 Token: </p>
-                    <ul>
-                        <li>
-                            <input type="radio" name="player1Token" id="tokenX" value="X" checked>
-                            <label for="tokenX">X</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="player1Token" id="tokenO" value="O">
-                            <label for="tokenO">O</label>
-                        </li>
-                    </ul>
-
-                    <div></div>
+                    <p class="dialog-title">Game Information</p>
+                    <div class="player1">
+                        <div class="player-name-input">
+                            <label for="player1Name">Player 1 Name: </label>
+                            <input type="text" name="player1Name" id="player1Name" class="name-input" required>
+                        </div>
+                        <div class="player-token-input">
+                            <p>Choose Player 1 Token: </p>
+                            <ul class="token-selection">
+                                <li class="token-option">
+                                    <input type="radio" name="player1Token" id="player1TokenX" value="X" checked>
+                                    <label for="player1TokenX">X</label>
+                                </li>
+                                <li class="token-option">
+                                    <input type="radio" name="player1Token" id="player1TokenO" value="O">
+                                    <label for="player1TokenO">O</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                     
-                    <label for="player2Name">Player 2 Name: </label>
-                    <input type="text" name="player2Name" id="player2Name" required>
+                    <div class="player2">
+                        <div class="player-name-input">
+                            <label for="player2Name">Player 2 Name: </label>
+                            <input type="text" name="player2Name" id="player2Name" class="name-input" required>
+                        </div>
+                        <div class="player-token-input">
+                            <p>Choose Player 2 Token: </p>
+                            <ul class="token-selection">
+                                <li class="token-option">
+                                    <input type="radio" name="player2Token" id="player2TokenX" value="X">
+                                    <label for="player2TokenX">X</label>
+                                </li>
+                                <li class="token-option">
+                                    <input type="radio" name="player2Token" id="player2TokenO" value="O" checked>
+                                    <label for="player2TokenO">O</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
-                    <p>Choose Player 2 Token: </p>
-                    <ul>
-                        <li>
-                            <input type="radio" name="player2Token" id="tokenX" value="X">
-                            <label for="tokenX">X</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="player2Token" id="tokenO" value="O" checked>
-                            <label for="tokenO">O</label>
-                        </li>
-                    </ul>
-
-                    <div>
-                        <button class="begin">begin</button>
-                        <button class="cancel">cancel</button>
+                    <div class="dialog-buttons">
+                        <button class="begin">Begin</button>
+                        <button class="cancel">Cancel</button>
                     </div>
                 </form>
             </dialog>
         </div>
-        <div>
-            <button class="start-game">Start Game</button>
+        <div class="game-buttons">
+            <button class="play-game">Play Game</button>
             <button class="restart-game" hidden>Play Again</button>
             <button class="new-game" hidden>New Game</button>
         </div>
-        <div>
-            <p>Player 1: </p>
-            <output class="player1-name output"></output>
-            <output class="player1-token output"></output>
-            <p>Player 2: </p>
-            <output class="player2-name output"></output>
-            <output class="player2-token output"></output>
+        <div class="player-display">
+            <div class="player1-display">
+                <p class="player1-title" hidden>Player 1: </p>
+                <div class="output">
+                    <output class="player1-name output"></output>
+                    <output class="player1-token output"></output>
+                </div>
+            </div>
+            <div class="player2-display">
+                <p class="player2-title" hidden>Player 2: </p>
+                <div class="output">
+                    <output class="player2-name output"></output>
+                    <output class="player2-token output"></output>
+                </div>
+            </div>
+            <div class="winner-display">
+                <output class="winner-output"></output>
+            </div>
+        </div>
+        <div class="game-board-container">
+            <ul class="game-board">
+    
+            </ul>
         </div>
     </div>
-    <div class="game-board-container">
-        <ul class="game-board">
-
-        </ul>
-    </div>
+    
 </body>
 </html>
